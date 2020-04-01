@@ -90,7 +90,7 @@ public class FritzVisionUnity : MonoBehaviour
         foreach (FritzPose pose in poses)
 		{
             FritzHumanTrackable trackable = humanTrackableManager.CreateOrUpdateTrackable(0, pose);
-            var estimatedShoulder = trackable.GetEstimatedPosition(FritzPoseParts.Nose);
+            var estimatedShoulder = trackable.GetEstimatedPosition(trackedPart);
 
 		    if (estimatedShoulder.HasValue)
 		    {
