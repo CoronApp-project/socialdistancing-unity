@@ -14,30 +14,43 @@ public class Distance : MonoBehaviour
     GameObject sphere;
 
     [SerializeField]
-    Text txt;
+    GameObject warning;
+
+    [SerializeField]
+    GameObject info;
 
     float distance = 0.0f;
 
     void Start()
     {
-        txt.text = "d: " + distance.ToString() + " M";
+        warning.SetActive(false);
+        info.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         distance = Vector3.Distance(m_camera.transform.position, sphere.transform.position);
         var rounded = Mathf.Round(distance * 100.0f) * 0.01f;
         if(distance < 2.0f)
         {
-            txt.color = Color.red;
+            warning.SetActive(true);
         }
         if(distance > 2.0f)
         {
-            txt.color = Color.green;
+            if(warning.activeSelf)
+            {
+                warning.SetActive(false);
+                info.SetActive(true);
+            }
+            
         }
-        txt.text = "distance " + rounded.ToString() + " M";
+       
+    }
+
+    public void Switch()
+    {
+        info.SetActive(false);
     }
 
 }
