@@ -32,6 +32,8 @@ public class Distance : MonoBehaviour
     {
         distance = Vector3.Distance(m_camera.transform.position, sphere.transform.position);
         var rounded = Mathf.Round(distance * 100.0f) * 0.01f;
+        distance = (float)rounded;
+        
         if(distance < 2.0f)
         {
             warning.SetActive(true);
@@ -43,9 +45,7 @@ public class Distance : MonoBehaviour
                 warning.SetActive(false);
                 info.SetActive(true);
             }
-            
         }
-       
     }
 
     public void Switch()
@@ -53,4 +53,8 @@ public class Distance : MonoBehaviour
         info.SetActive(false);
     }
 
+    public float RealLifeDistance
+    {
+        get { return distance; }
+    }
 }

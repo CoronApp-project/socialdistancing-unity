@@ -645,8 +645,9 @@ GameObject:
   - component: {fileID: 653544135}
   - component: {fileID: 653544134}
   - component: {fileID: 653544133}
+  - component: {fileID: 653544137}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: ProtectionCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,12 +721,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653544132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: -16, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
-  m_Father: {fileID: 1593125386}
+  m_Father: {fileID: 906838672}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653544137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653544132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3fbca14ca7d2b459bc8646e422221c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cameraobj: {fileID: 1593125381}
+  m_circlematerial: {fileID: 2100000, guid: a98fae70401537d41a06487a7a6ee721, type: 2}
+  m_distancechecker: {fileID: 503079753}
 --- !u!1 &883157657
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +877,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 653544136}
   - {fileID: 1593125386}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1203,10 +1220,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 653544136}
+  m_Children: []
   m_Father: {fileID: 906838672}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598153717
 GameObject:
