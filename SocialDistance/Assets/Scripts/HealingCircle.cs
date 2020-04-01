@@ -15,11 +15,11 @@ public class HealingCircle : MonoBehaviour
 
         if (m_distancechecker.RealLifeDistance < 2f)
         {
-            m_circlematerial.color = Color.red;
+            m_circlematerial.color = new Color(255, 0, 0, 0.17f);
         }
         else
         {
-            m_circlematerial.color = Color.white;
+            m_circlematerial.color = new Color(0, 255, 0, 0.17f);
         }
     }
 }
