@@ -19,12 +19,16 @@ public class Distance : MonoBehaviour
     [SerializeField]
     GameObject info;
 
+    [SerializeField]
+    Text speed;
+
     float distance = 0.0f;
 
     void Start()
     {
         warning.SetActive(false);
         info.SetActive(false);
+        TextSpeed();
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class Distance : MonoBehaviour
         if(distance < 2.0f)
         {
             warning.SetActive(true);
+            speed.color = Color.red;
         }
         if(distance > 2.0f)
         {
@@ -43,9 +48,16 @@ public class Distance : MonoBehaviour
                 warning.SetActive(false);
                 info.SetActive(true);
             }
-            
+
+            speed.color = Color.green;
         }
-       
+        TextSpeed();
+        
+    }
+
+    void TextSpeed()
+    {
+        speed.text = "Distance: " + distance.ToString() + " M";
     }
 
     public void Switch()
