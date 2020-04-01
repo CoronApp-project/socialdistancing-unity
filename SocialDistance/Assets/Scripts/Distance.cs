@@ -19,12 +19,16 @@ public class Distance : MonoBehaviour
     [SerializeField]
     GameObject info;
 
+    [SerializeField]
+    Text speed;
+
     float distance = 0.0f;
 
     void Start()
     {
         warning.SetActive(false);
         info.SetActive(false);
+        TextSpeed();
     }
 
     // Update is called once per frame
@@ -32,11 +36,10 @@ public class Distance : MonoBehaviour
     {
         distance = Vector3.Distance(m_camera.transform.position, sphere.transform.position);
         var rounded = Mathf.Round(distance * 100.0f) * 0.01f;
-        distance = (float)rounded;
-        
         if(distance < 2.0f)
         {
             warning.SetActive(true);
+            speed.color = Color.red;
         }
         if(distance > 2.0f)
         {
@@ -45,7 +48,16 @@ public class Distance : MonoBehaviour
                 warning.SetActive(false);
                 info.SetActive(true);
             }
+
+            speed.color = Color.green;
         }
+        TextSpeed();
+        
+    }
+
+    void TextSpeed()
+    {
+        speed.text = "Distance: " + distance.ToString() + " M";
     }
 
     public void Switch()
@@ -53,8 +65,4 @@ public class Distance : MonoBehaviour
         info.SetActive(false);
     }
 
-    public float RealLifeDistance
-    {
-        get { return distance; }
-    }
 }
