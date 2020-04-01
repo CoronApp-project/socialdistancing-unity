@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Distance : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class Distance : MonoBehaviour
     GameObject info;
 
     [SerializeField]
-    Text speed;
+    TextMeshProUGUI measurementtxt;
 
     float distance = 0.0f;
 
@@ -28,7 +28,7 @@ public class Distance : MonoBehaviour
     {
         warning.SetActive(false);
         info.SetActive(false);
-        TextSpeed();
+        UpdateMeasureText();
     }
 
     // Update is called once per frame
@@ -36,10 +36,16 @@ public class Distance : MonoBehaviour
     {
         distance = Vector3.Distance(m_camera.transform.position, sphere.transform.position);
         var rounded = Mathf.Round(distance * 100.0f) * 0.01f;
+        distance = (float) rounded;
+        
         if(distance < 2.0f)
         {
             warning.SetActive(true);
-            speed.color = Color.red;
+            if(info.activeSelf)
+            {
+                info.SetActive(false);
+            }
+            measurementtxt.color = Color.red;
         }
         if(distance > 2.0f)
         {
@@ -49,15 +55,14 @@ public class Distance : MonoBehaviour
                 info.SetActive(true);
             }
 
-            speed.color = Color.green;
+            measurementtxt.color = Color.green;
         }
-        TextSpeed();
-        
+        UpdateMeasureText();
     }
 
-    void TextSpeed()
+    void UpdateMeasureText()
     {
-        speed.text = "Distance: " + distance.ToString() + " M";
+        measurementtxt.text = "Distance: " + distance.ToString() + " M";
     }
 
     public void Switch()
@@ -65,4 +70,8 @@ public class Distance : MonoBehaviour
         info.SetActive(false);
     }
 
+    public float RealLifeDistance
+    {
+        get { return distance; }
+    }
 }
