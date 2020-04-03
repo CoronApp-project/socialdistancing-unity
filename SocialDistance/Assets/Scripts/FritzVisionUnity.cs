@@ -86,7 +86,7 @@ public class FritzVisionUnity : MonoBehaviour
     public void UpdatePose(string message)
     {
         List<FritzPose> poses = FritzPoseManager.ProcessEncodedPoses(message);
-        FritzHumanTrackable trackable = humanTrackableManager.CreateOrUpdateTrackable(0, pose);
+        FritzHumanTrackable trackable = humanTrackableManager.CreateOrUpdateTrackable(0, poses[0]);
 
         var estimatedShoulder = trackable.GetEstimatedPosition(trackedPart);
 
