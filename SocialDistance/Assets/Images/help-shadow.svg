@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="82px" viewBox="0 0 57 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>?</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="OpenSans-ExtraBold, Open Sans" font-size="100" font-weight="600" letter-spacing="-2.41176468" fill="#FFFFFF">
+            <tspan x="0.461741717" y="107">?</tspan>
+        </text>
+        <filter x="-14.3%" y="-3.7%" width="128.6%" height="110.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
+        <g id="help-shadow" transform="translate(4.000000, -32.000000)" fill="#FFFFFF">
+            <g id="?">
+                <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                <use xlink:href="#text-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

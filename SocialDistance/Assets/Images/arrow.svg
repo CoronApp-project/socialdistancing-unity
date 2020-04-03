@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="63px" viewBox="0 0 56 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="arrow" transform="translate(-2.000000, 1.000000)" stroke="#FFFFFF">
+            <g id="Group" transform="translate(8.000000, 5.000000)">
+                <line x1="21.7070312" y1="6" x2="21.2929688" y2="52" id="Path-4" stroke-width="10"></line>
+                <line x1="0.41015625" y1="17.6279297" x2="20.4101563" y2="0" id="Path-5" stroke-width="11"></line>
+                <line x1="21.9101562" y1="17.5" x2="44.4101562" y2="0" id="Path-5-Copy" stroke-width="11" transform="translate(33.000000, 9.000000) scale(-1, 1) translate(-33.000000, -9.000000) "></line>
+            </g>
+        </g>
+    </g>
+</svg>
