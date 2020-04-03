@@ -78,3 +78,5 @@ FritzConfig.asset.meta
 
 # excluding local python version
 .python-version
+
+SocialDistance/iOS/
