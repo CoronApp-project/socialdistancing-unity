@@ -3027,6 +3027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextButton: {fileID: 714691756}
+  nextSceneName: SocialDistance_Test
 --- !u!1 &1167636961
 GameObject:
   m_ObjectHideFlags: 0

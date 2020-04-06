@@ -38,6 +38,7 @@ public class FritzVisionUnity : MonoBehaviour
     [SerializeField]
     Vector3 debugPoint = new Vector3(0.1f, 0.1f, 3f);
 
+    public bool isTracked;
 
     FritzHumanTrackableManager humanTrackableManager
 	{
@@ -81,7 +82,25 @@ public class FritzVisionUnity : MonoBehaviour
         FritzPoseManager.Configure();
         FritzPoseManager.SetCallbackTarget("FritzPoseController");
         FritzPoseManager.SetCallbackFunctionTarget("UpdatePose");
+        isTracked = false;
 	}
+
+    
+   bool SetTrackedObject(Vector3? objectTracker)
+    {
+        if(objectTracker.HasValue)
+        {
+            trackedObject.transform.position = objectTracker.Value;
+            isTracked = true;
+            return true;
+        }
+        else
+        {
+            isTracked = false;
+            return false;
+        }
+    }
+   
 
     public void UpdatePose(string message)
     {
@@ -89,12 +108,15 @@ public class FritzVisionUnity : MonoBehaviour
         FritzHumanTrackable trackable = humanTrackableManager.CreateOrUpdateTrackable(0, poses[0]);
 
         var estimatedShoulder = trackable.GetEstimatedPosition(trackedPart);
+        SetTrackedObject(estimatedShoulder);
 
-		if (estimatedShoulder.HasValue)
+		/*if (estimatedShoulder.HasValue)
 		{
            trackedObject.transform.position = estimatedShoulder.Value;
-		}
+		}*/
     }
+
+
 
     private void Update()
     {
