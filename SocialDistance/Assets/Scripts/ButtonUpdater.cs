@@ -7,6 +7,7 @@ using TMPro;
 public class ButtonUpdater : MonoBehaviour
 {
     public UnityEngine.UI.Button nextButton;
+    public string nextSceneName;
 
     public void PageChanged()
     {
@@ -35,6 +36,6 @@ public class ButtonUpdater : MonoBehaviour
 
     public void Skip()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SocialDistanceTesting");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 }
