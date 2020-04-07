@@ -20,9 +20,6 @@ public class Distance : MonoBehaviour
     GameObject info;
 
     [SerializeField]
-    GameObject infos;
-
-    [SerializeField]
     TextMeshProUGUI measurementtxt;
     
     [SerializeField]
