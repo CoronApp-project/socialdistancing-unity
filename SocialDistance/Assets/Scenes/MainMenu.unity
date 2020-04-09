@@ -3027,6 +3027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextButton: {fileID: 714691756}
+  skipButton: {fileID: 1511386591}
   nextSceneName: SocialDistance_Test
 --- !u!1 &1167636961
 GameObject:
