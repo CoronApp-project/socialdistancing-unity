@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ai.fritz.vision": "https://github.com/fritzlabs/fritz-unity-sdk.git",
+    "ai.fritz.vision": "https://github.com/basdp/fritz-unity-sdk.git#feature/ios-fritz-5",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ads": "2.0.8",
@@ -54,8 +54,8 @@
   },
   "lock": {
     "ai.fritz.vision": {
-      "hash": "296e0e54192c3a97474e15bd334b74a2c0c18c7d",
-      "revision": "HEAD"
+      "hash": "966c492544191490f995f304556b2de603d744ed",
+      "revision": "feature/ios-fritz-5"
     }
   }
 }
