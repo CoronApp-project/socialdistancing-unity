@@ -7,6 +7,7 @@ using TMPro;
 public class ButtonUpdater : MonoBehaviour
 {
     public UnityEngine.UI.Button nextButton;
+    public GameObject skipButton;
     public string nextSceneName;
 
     public void PageChanged()
@@ -16,9 +17,12 @@ public class ButtonUpdater : MonoBehaviour
         if (simpleScrollSnap.TargetPanel == simpleScrollSnap.NumberOfPanels - 1)
         {
             textMesh.text = "Start";
+            skipButton.SetActive(false);
+
         } else
         {
             textMesh.text = "Next";
+            skipButton.SetActive(true);
         }
     }
 
