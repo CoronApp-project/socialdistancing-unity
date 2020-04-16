@@ -51,5 +51,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "ai.fritz.vision": {
+      "hash": "083911c9ca33ace4620cc3510458ea627cb58ae7",
+      "revision": "feature/ios-fritz-5"
+    }
   }
 }
