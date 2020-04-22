@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Cam: {fileID: 1593125382}
   trackedObject: {fileID: 883157657}
   trackedPart: 5
-  debugPoint: {x: 0.1, y: 0.1, z: 3}
+  debugPoint: {x: 0, y: 0, z: 0}
   isTracked: 0
 --- !u!114 &278142032
 MonoBehaviour:
@@ -621,7 +621,6 @@ MonoBehaviour:
   sphere: {fileID: 883157657}
   warning: {fileID: 646603875}
   info: {fileID: 1795924418}
-  infos: {fileID: 1837700765}
   measurementtxt: {fileID: 1467484432}
   fritzVisionUnity: {fileID: 278142031}
   distancePlane: {fileID: 653544132}
@@ -1095,6 +1094,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012191993}
   m_CullTransparentMesh: 0
+--- !u!1 &1063299102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1063299103}
+  - component: {fileID: 1063299104}
+  m_Layer: 0
+  m_Name: PauseChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063299103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063299102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1063299104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063299102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19711718239ca4d1092857d88c52179c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pausedobj: {fileID: 906838670}
 --- !u!1 &1467484430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572908131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
   m_Name: 

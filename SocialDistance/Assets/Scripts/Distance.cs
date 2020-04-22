@@ -29,6 +29,11 @@ public class Distance : MonoBehaviour
 
     float distance = 0.0f;
 
+    void Awake()
+    {
+        Screen.fullScreen = false;
+    }
+
     void Start()
     {
         warning.SetActive(false);
